@@ -18,7 +18,8 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "react": "^0.14.0-beta3",
+    "object-assign": "^4.1.1",
+    "react": "^18.2.0",
     "react-dom": "^0.14.0-beta3",
     "snapkite-stream-client": "^1.0.3"
   },
