@@ -1,4 +1,8 @@
+var CollectionActionCreators = require('../actions/CollectionActionCreators');
+
+
 var StreamTweet = React.createClass({
+
 
     getInitialState: function() {
         console.log('[Snapterest] StreamTweet: 1. Running getInitialState()');
@@ -58,6 +62,10 @@ var StreamTweet = React.createClass({
     },
 
 
+    addTweetToCollection : function(tweet){
+        CollectionActionCreators.addTweetToCollection(tweet);
+    },
+
     shouldComponentUpdate: function() {
         console.log('[Snapterest] StreamTweet: 5. Running shouldComponentUpdate()');
         return (nextProps.tweet.text.length > 5);
@@ -85,7 +93,7 @@ var StreamTweet = React.createClass({
                 <Header text={this.state.headerText} />
                 <Tweet 
                     tweet = {this.props.tweet}
-                    onImageClick = {this.props.onAddTweetToCollection} />
+                    onImageClick = {this.addTweetToCollection} />
             </section>
         );
     }
